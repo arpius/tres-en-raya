@@ -1,6 +1,8 @@
 var posicion;
 var jugadas;
 
+window.onload = iniciar;
+
 function iniciar() {
 	crearTabla(3, 3);
 	posicion = 1;
