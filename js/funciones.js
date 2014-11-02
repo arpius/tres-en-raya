@@ -7,6 +7,8 @@ function iniciar() {
 	crearTabla(3, 3);
 	posicion = 1;
 	jugadas = new Array(9);
+	
+	document.getElementById("tablero").onclick = moverFicha;
 }
 
 function crearTabla(filas, columnas) {
