@@ -7,7 +7,7 @@ function iniciar() {
 	crearTabla(3, 3);
 	posicion = 1;
 	jugadas = new Array(9);
-	
+
 	document.getElementById("tablero").onclick = moverFicha;
 }
 
@@ -56,73 +56,73 @@ function moverFicha(event) {
 }
 
 function jugador() {
+	var azul = false;
+	var verde = false;
+
 	//jugador 1
 	if(jugadas['A1'] == 0 && jugadas['A2'] == 0 && jugadas['A3'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['B1'] == 0 && jugadas['B2'] == 0 && jugadas['B3'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['C1'] == 0 && jugadas['C2'] == 0 && jugadas['C3'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['A1'] == 0 && jugadas['B2'] == 0 && jugadas['C3'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['A3'] == 0 && jugadas['B2'] == 0 && jugadas['C1'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['A1'] == 0 && jugadas['B1'] == 0 && jugadas['C1'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['A2'] == 0 && jugadas['B2'] == 0 && jugadas['C2'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 	else if(jugadas['A3'] == 0 && jugadas['B3'] == 0 && jugadas['C3'] == 0) {
-		alert('Victoria aplastante del equipo verde');
-		reiniciarPartida();
+		verde = true;
 	}
 
 	//jugador 2
 	if(jugadas['A1'] == 1 && jugadas['A2'] == 1 && jugadas['A3'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['B1'] == 1 && jugadas['B2'] == 1 && jugadas['B3'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['C1'] == 1 && jugadas['C2'] == 1 && jugadas['C3'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['A1'] == 1 && jugadas['B2'] == 1 && jugadas['C3'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['A3'] == 1 && jugadas['B2'] == 1 && jugadas['C1'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['A1'] == 1 && jugadas['B1'] == 1 && jugadas['C1'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['A2'] == 1 && jugadas['B2'] == 1 && jugadas['C2'] == 1) {
-		alert('Victoria aplastante del equipo azul');
-		reiniciarPartida();
+		azul = true;
 	}
 	else if(jugadas['A3'] == 1 && jugadas['B3'] == 1 && jugadas['C3'] == 1) {
+		azul = true;
+	}
+
+	//gana el jugador 1
+	if(verde) {
+		alert('Victoria aplastante del equipo verde');
+		reiniciarPartida();
+	}
+
+	//gana el jugador 2
+	if(azul) {
 		alert('Victoria aplastante del equipo azul');
 		reiniciarPartida();
 	}
+
 }
 
 function reiniciarPartida() {
